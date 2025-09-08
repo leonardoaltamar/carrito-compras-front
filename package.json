@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^3.0.2",
     "@heroui/button": "2.2.25",
     "@heroui/code": "2.2.19",
+    "@heroui/drawer": "^2.2.22",
     "@heroui/input": "2.4.26",
     "@heroui/kbd": "2.2.20",
     "@heroui/link": "2.2.22",

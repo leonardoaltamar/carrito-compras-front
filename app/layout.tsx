@@ -41,6 +41,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "white" }}>
           <main>
             <Providers>
+              <Navbar></Navbar>
               {children}
             </Providers>
           </main>

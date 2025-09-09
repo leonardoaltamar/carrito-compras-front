@@ -6,24 +6,20 @@ export const siteConfig = {
   navItems: [
     {
       label: "Home",
-      href: "/",
+      href: "/dashboard",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Categorias",
+      href: "/categorias",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Productos",
+      href: "/productos",
     },
     {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
+      label: "Carrito de compras",
+      href: "/carrito-compras",
+    }
   ],
   navMenuItems: [
     {
@@ -60,10 +56,8 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
+    github: "https://github.com/leonardoaltamar",
     discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    sponsor: "https://github.com/leonardoaltamar",
   },
 };

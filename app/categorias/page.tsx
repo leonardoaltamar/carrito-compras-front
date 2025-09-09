@@ -15,28 +15,24 @@ export default function CategoriaScreen() {
             <div>
                 <Table aria-label="Example static collection table">
                     <TableHeader>
-                        <TableColumn>Nombre</TableColumn>
-                        <TableColumn>Stock</TableColumn>
-                        <TableColumn>Precio</TableColumn>
-                        <TableColumn>Fecha ingreso</TableColumn>
+                        <TableColumn>Codigo de la categoría</TableColumn>
+                        <TableColumn>Descripción</TableColumn>
+                        <TableColumn>Fecha de creación</TableColumn>
                     </TableHeader>
                     <TableBody>
                         <TableRow key="1">
-                            <TableCell>iphone 12</TableCell>
-                            <TableCell>10</TableCell>
-                            <TableCell>$3.000.000</TableCell>
+                            <TableCell>TECNO</TableCell>
+                            <TableCell>Tecnologica</TableCell>
                             <TableCell>20-01-2025</TableCell>
                         </TableRow>
                         <TableRow key="2">
-                            <TableCell>iphone 12 pro max</TableCell>
-                            <TableCell>10</TableCell>
-                            <TableCell>$3.500.000</TableCell>
+                            <TableCell>FASHON</TableCell>
+                            <TableCell>Moda</TableCell>
                             <TableCell>20-01-2025</TableCell>
                         </TableRow>
                         <TableRow key="3">
-                            <TableCell>Airpos pro</TableCell>
-                            <TableCell>10</TableCell>
-                            <TableCell>$3.100.000</TableCell>
+                            <TableCell>CALZ</TableCell>
+                            <TableCell>Calzado</TableCell>
                             <TableCell>20-01-2025</TableCell>
                         </TableRow>
                     </TableBody>

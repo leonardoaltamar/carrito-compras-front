@@ -36,12 +36,14 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
       <body
-        className={clsx( "min-h-screen text-foreground bg-background font-sans antialiased", fontSans.variable,)}
+        className={clsx("min-h-screen text-foreground bg-background font-sans antialiased", fontSans.variable,)}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "white" }}>
-            <main>
+          <main>
+            <Providers>
               {children}
-            </main>          
+            </Providers>
+          </main>
         </Providers>
       </body>
     </html>

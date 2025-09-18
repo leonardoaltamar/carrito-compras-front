@@ -1,20 +1,31 @@
 import Category from '@/core/interfaces/Category';
-import { createSlice } from '@reduxjs/toolkit'
+import { GeneratorId } from '@/core/lib/uuid/GeneratorId';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface CategorySlice {
   categories: Category[]
 }
 
 const initialState: CategorySlice = {
-    categories: []
+    categories: [
+      {
+        id: GeneratorId.generateId(),
+        code: 'TEC',
+        description: 'Tecnología'
+      }
+    ]
 }
 
 const CategorySlice = createSlice({
   name: 'category',
   initialState,
-  reducers: {}
+  reducers: {
+    addCategory(state, action: PayloadAction<Category>){
+      state.categories.push(action.payload);
+    }
+  }
 });
 
-export const {} = CategorySlice.actions
+export const { addCategory } = CategorySlice.actions
 
 export default CategorySlice.reducer

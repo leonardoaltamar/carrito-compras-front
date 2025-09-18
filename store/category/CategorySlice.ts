@@ -1,6 +1,11 @@
+import Category from '@/core/interfaces/Category';
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = {
+interface CategorySlice {
+  categories: Category[]
+}
+
+const initialState: CategorySlice = {
     categories: []
 }
 

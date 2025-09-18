@@ -28,8 +28,16 @@ import {
 } from "@/components/icons";
 import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@heroui/dropdown";
 import { Avatar } from "@heroui/avatar";
+import { useRouter } from "next/navigation";
 
 export const Navbar = () => {
+
+  const router = useRouter();
+
+  const goToLogin = () => {
+    router.push('/login');
+  }
+
   const searchInput = (
     <Input
       aria-label="Search"
@@ -110,8 +118,8 @@ export const Navbar = () => {
               <p className="font-semibold">Signed in as</p>
               <p className="font-semibold">zoey@example.com</p>
             </DropdownItem>
-            <DropdownItem key="logout" color="danger">
-              Log Out
+            <DropdownItem key="logout" color="danger" onPress={goToLogin}>
+              Cerrar sesión
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>

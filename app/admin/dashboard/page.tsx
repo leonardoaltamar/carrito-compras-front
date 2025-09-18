@@ -1,10 +1,5 @@
 "use client"
-
-import { faHouse, faRectangleList } from '@fortawesome/free-regular-svg-icons'
-import { faBox, faCartShopping, faCubesStacked } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Legend, Tooltip } from 'recharts';
 import VentasAnuales from './sections/ventas-anuales'
 import ReportIncomeExpenses from './sections/report-income-expense'
 import ListBestSellers from './sections/list-best-sellers'

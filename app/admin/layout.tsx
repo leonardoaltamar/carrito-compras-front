@@ -8,8 +8,7 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import { Providers } from "./providers";
-import { ProvidersRedux } from "@/store/Providers";
+import { Providers } from "../providers";
 
 export const metadata: Metadata = {
   title: {
@@ -35,19 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
-      <head />
-      <body
-        className={clsx("min-h-screen text-foreground bg-background font-sans antialiased", fontSans.variable,)}
-      >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "white" }}>
-          <main>
-            <ProvidersRedux>              
-              {children}
-            </ProvidersRedux>
-          </main>
-        </Providers>
-      </body>
-    </html>
+    <>
+      <Navbar></Navbar>
+      {children}
+    </>
   );
 }

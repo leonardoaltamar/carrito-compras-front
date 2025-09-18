@@ -1,8 +1,16 @@
+"use client"
 
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
+import { useRouter } from "next/navigation";
 
 export default function LoginScreen() {
+
+    const router = useRouter();
+
+    const goToDashboard = () => {
+        router.push('/admin/dashboard');
+    }
 
     return (
         <div className="h-screen flex justify-center items-center">
@@ -24,7 +32,7 @@ export default function LoginScreen() {
                     fullWidth
                 />
 
-                <Button color="primary" fullWidth>
+                <Button color="primary" fullWidth onPress={() => {goToDashboard()}}>
                     Ingresar
                 </Button>
             </div>

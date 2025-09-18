@@ -5,7 +5,7 @@ import { Table, TableHeader, TableBody, TableColumn, TableRow, TableCell } from 
 const ListBestProduct = () => {
     return (
         <Card>
-            <h2 className='font-bold text-2xl'>Productos mas vendidos del mes</h2>
+            <h2 className='font-bold text-2xl'>Productos más vendidos del mes</h2>
             <Table className='w-full' aria-label="Example static collection table">
                 <TableHeader>
                     <TableColumn>Nombre</TableColumn>

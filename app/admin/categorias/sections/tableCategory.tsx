@@ -38,7 +38,7 @@ const TableCategory = () => {
                     ))
                 }
             </TableBody>
-        </Table>
+        </Table>        
     )
 }
 

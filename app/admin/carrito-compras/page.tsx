@@ -7,10 +7,10 @@ import {
     DrawerBody,
     DrawerFooter,
 } from "@heroui/drawer";
-import { useDisclosure } from './hooks/drawer';
 import { useState } from 'react';
 import { Input } from "@heroui/input";
 import { Divider } from "@heroui/divider";
+import { useDisclosure } from '@heroui/modal';
 
 const productos = [
     {

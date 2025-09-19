@@ -11,7 +11,7 @@ const DashboardScreen = () => {
         <div className="h-screen flex flex-col p-4">
             <h2 className=' font-bold text-3xl text-center mb-8'>Bienvenidos al menú de FastShop</h2>
             
-            <div className='flex gap-8 justify-center mb-10'>
+            <div className='flex flex-wrap gap-8 justify-center mb-10'>
                 <VentasAnuales></VentasAnuales>
                 <ReportIncomeExpenses></ReportIncomeExpenses>
                 <ListBestSellers></ListBestSellers>

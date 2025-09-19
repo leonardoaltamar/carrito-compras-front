@@ -1,14 +1,15 @@
 "use client"
+
 import React, { useEffect, useState } from 'react'
 import { Table, TableHeader, TableBody, TableColumn, TableRow, TableCell } from "@heroui/table";
 import { useAppSelector } from '@/store';
-import Category from '@/core/interfaces/Category';
-import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+import Product from '@/core/interfaces/Product';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPen, faPenAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 
-const TableCategory = () => {
-    const categories = useAppSelector(state => state.category.categories);
+const TableProduct = () => {
+    const products = useAppSelector(state => state.product.products);
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
@@ -19,9 +20,9 @@ const TableCategory = () => {
         return (
             <Table aria-label="Loading table">
                 <TableHeader>
-                    <TableColumn>Código</TableColumn>
-                    <TableColumn>Descripción</TableColumn>
-                    <TableColumn>Acciones</TableColumn>
+                    <TableColumn>Nombre</TableColumn>
+                    <TableColumn>Stock</TableColumn>
+                    <TableColumn>Precio</TableColumn>
                 </TableHeader>
                 <TableBody>
                     <TableRow>
@@ -37,17 +38,18 @@ const TableCategory = () => {
     return (
         <Table aria-label="Example static collection table">
             <TableHeader>
-                <TableColumn>Codigo de la categoría</TableColumn>
-                <TableColumn>Descripción</TableColumn>
+                <TableColumn>Nombre</TableColumn>
+                <TableColumn>Stock</TableColumn>
+                <TableColumn>Precio</TableColumn>
                 <TableColumn>Acciones</TableColumn>
             </TableHeader>
-
             <TableBody>
                 {
-                    categories.map((category: Category) => (
-                        <TableRow key={category.id}>
-                            <TableCell>{category.code}</TableCell>
-                            <TableCell>{category.description}</TableCell>
+                    products.map((product: Product) => (
+                        <TableRow key={product.id}>
+                            <TableCell>{product.name}</TableCell>
+                            <TableCell>{product.stock}</TableCell>
+                            <TableCell>{product.price}</TableCell>
                             <TableCell className='flex items-center gap-4'>
                                 <div className='flex flex-col justify-center items-center text-blue-500'>
                                     <FontAwesomeIcon icon={faPen} />
@@ -66,4 +68,4 @@ const TableCategory = () => {
     )
 }
 
-export default TableCategory
+export default TableProduct

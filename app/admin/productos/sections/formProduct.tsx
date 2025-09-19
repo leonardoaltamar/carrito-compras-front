@@ -39,7 +39,6 @@ const FormProduct = ({ onClose }: any) => {
         price: Number(data.price),
         stock: Number(data.stock),
         inCar: false,
-        quantity: 0
       }
     ))
 

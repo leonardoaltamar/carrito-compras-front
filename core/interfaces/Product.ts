@@ -7,6 +7,5 @@ export default interface Product {
     img?: any
     stock: number
     inCar: boolean
-    quantity?: number
     category?: any
 }

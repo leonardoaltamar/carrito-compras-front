@@ -2,11 +2,11 @@ import Category from '@/core/interfaces/Category';
 import { GeneratorId } from '@/core/lib/uuid/GeneratorId';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-interface CategorySlice {
+interface ICategorySlice {
   categories: Category[]
 }
 
-const initialState: CategorySlice = {
+const initialState: ICategorySlice = {
     categories: [
       {
         id: GeneratorId.generateId(),
